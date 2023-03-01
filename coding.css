@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+#illus {
+  background: url('images/pattern-bg.svg') no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0;
+}
+#img {
+  width: 80%;
+  position: relative;
+  z-index: 3;
+  min-width: 225px;
+}
+#img > img {
+  display: block;
+  width: 100%;
+}
+#switch {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 1em;
+  position: absolute;
+  transform: translateY(50%);
+}
+#switch img:hover {
+  cursor: pointer;
+  transform: scale(125%);
+}
+#text {
+  font-weight: 300;
+  color: hsl(240, 38%, 20%);
+  margin-bottom: 1em;
+  line-height: 1.3em;
+  font-size: 1.3em;
+  background: url('images/pattern-quotes.svg') no-repeat;
+  background-size: 90px;
+  padding-top: 2.5em;
+}
+h1, h2 {
+  font-size: 0.9em;
+}
+h2 {
+  color: hsl(240, 18%, 77%);
+  font-weight: 500;
+}
+
+@media screen and (min-width:900px) {
+  main {
+    width: 90vw;
+    max-width: 1440px;
+    height: 90vh;
+    max-height: 720px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background: url('images/pattern-curve.svg') no-repeat;
+    background-size: 35%;
+    background-position: left bottom;
+    box-shadow: 0 8px 15px rgb(172, 171, 171);
+  }
+  #illus {
+    width: 40%;
+    min-width: 450px;
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+  }
+  #img::before {
+    content: "";
+    width: 150px;
+    height: 60px;
+    border-radius: 30px;
+    box-shadow: 0 10px 35px hsla(240, 12%, 70%, 0.75);
+    position: absolute;
+    left: 5%;
+    bottom: 0;
+    z-index: -1; 
+  }
+  #switch {
+    width: 60px;
+    padding: 0.5em;
+    left: 10%;
+    bottom: 0;
+  }
+  #switch img {
+    width: 0.5em;
+  }
+  #illus + div {
+    width: 60%;
+    position: absolute;
+    left: 2.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    padding-left: 3rem;
+  }
+  #text {
+    background-position: 15% 0;
+  }
+  h2 {
+    margin-left: 0.3rem;
+  }
+  #text + div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width:899px) {
+  main {
+    width: 100%;
+    max-width: 500px;
+    margin: 1.5rem auto;
+    height: auto;
+    background: url('images/pattern-curve.svg') no-repeat;
+    background-size: 80%;
+    background-position: left bottom;
+    padding-top: 1.5rem;
+    padding-bottom: 6.5rem;
+  }
+  #illus {
+    width: 100%;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  #img > img {
+    width: 100%;
+    height: auto;
+  }
+  #img::before {
+    content: "";
+    width: 50%;
+    height: 60px;
+    border-radius: 30px;
+    box-shadow: 0 30px 35px hsla(240, 12%, 70%, 0.75);
+    position: absolute;
+    left: 10%;
+    bottom: 0;
+    z-index: -1; 
+  }
+  #switch {
+    width: 85px;
+    height: 40px;
+    border-radius: 30px;
+    padding: 0.5rem 1rem;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%,50%);
+  }
+  #text {
+    width: 95%;
+    margin: 1.5em auto;
+    background-position: 50% 0;
+    text-align: center;
+  }
+  h1,h2 {
+    width: 100%;
+    text-align: center;
+  }
+  h1 {
+    font-size: 1.1rem;
+    margin: 0.25rem auto;
+  }
+}
